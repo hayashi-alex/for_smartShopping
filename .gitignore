@@ -1,6 +1,4 @@
-mysql/data/
-
 www/html/rws-php-sdk
 
-
-
+mysql/data/*
+!.gitkeep
