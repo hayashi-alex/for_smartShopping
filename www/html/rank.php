@@ -12,7 +12,7 @@ function get_genre_id() {
   return $genre_ids;
 }
 
-function fetch_data($genre_id) { 
+function fetch_items($genre_id) { 
   $client = new RakutenRws_Client();
   $client->setApplicationId('1026301013779899297');
   $response = $client->execute('IchibaItemRanking', array(
@@ -26,13 +26,16 @@ function fetch_data($genre_id) {
   }
 }
 
-function hogehoge() {
-  $items = fetch_data(101240);
-  foreach($data as $item) {
-    var_dump($item['rank']);
+function main() {
+  $genre_ids = get_genre_id();
+  foreach($genre_ids as $genre_id) {
+    $items = fetch_items($genre_id);    
+    foreach($items as $item) {
+      ($item['itemName']);
+    }
   }
 }
 
-
+hogehoge();
 
 
