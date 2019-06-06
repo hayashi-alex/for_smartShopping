@@ -3,8 +3,6 @@
 require_once './rws-php-sdk/autoload.php';
 require_once './db/pdo.config.php';
 
-func(0);
-
 function func($genre_id) {
   $client = new RakutenRws_Client();
   $client->setApplicationId('1026301013779899297');
@@ -35,3 +33,4 @@ function func($genre_id) {
   }
 }
 
+func(0);
